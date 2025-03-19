@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "834358821003",
+    "project_id": "beercollection-de6e2",
+    "storage_bucket": "beercollection-de6e2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:834358821003:android:dc816cdf856c171e0bd48e",
+        "android_client_info": {
+          "package_name": "com.example.beercollection"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhtQqZ-EXAUw1xHg78QuLyLbap9dG1kWg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -172,13 +172,25 @@ class BeersRepository {
         if (breweryFragment.isEmpty()) {
             getBeers()
         } else {
-            beers.value = beers.value.filter { it.brewery.contains(breweryFragment, ignoreCase = true) }
+            beers.value =
+                beers.value.filter { it.brewery.contains(breweryFragment, ignoreCase = true) }
         }
     }
 
-    // Filtering beers by minimum ABV value
+    // Filtering beers by a specific ABV range
     fun filterBeersByAbv(minAbv: Double) {
-        Log.d("BeersRepository", "Filtering beers by minimum ABV: $minAbv")
-        beers.value = beers.value.filter { it.abv >= minAbv }
+        // Calculate the upper limit for the range based on the entered ABV
+        val maxAbv = minAbv + 0.9
+        Log.d("BeersRepository", "Filtering beers with ABV between $minAbv and $maxAbv")
+
+        // Using Kotlin's filter function to filter beers within the specified range
+        beers.value = beers.value.filter { beer ->
+            beer.abv in minAbv..maxAbv
+        }
+
+        Log.d("BeersRepository", "Filtered beers count: ${beers.value.size}")
+        }
     }
-}
+
+
+
